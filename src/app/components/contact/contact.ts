@@ -9,22 +9,22 @@ import { Component } from '@angular/core';
       <p class="subtitle animate-in-delay">Get in touch with us today for a free estimate.</p>
 
       <div class="contact-details animate-in-more-delay">
-        <a href="https://wa.me/919876543210" target="_blank" class="detail-link">
+        <a href="https://wa.me/919042737339" target="_blank" class="detail-link">
           <div class="detail-item glass-card">
             <span class="icon">💬</span>
             <div class="info">
               <h3>WhatsApp</h3>
-              <p>+91 98765 43210</p>
+              <p>+91 9042737339</p>
             </div>
           </div>
         </a>
 
-        <a href="mailto:hello@scraphome.com" class="detail-link">
+        <a href="mailto:novamobilespdm@gmail.com" class="detail-link">
           <div class="detail-item glass-card">
             <span class="icon">📧</span>
             <div class="info">
               <h3>Email</h3>
-              <p>hello@scraphome.com</p>
+              <p>novamobilespdm@gmail.com</p>
             </div>
           </div>
         </a>
@@ -34,7 +34,7 @@ import { Component } from '@angular/core';
             <span class="icon">📞</span>
             <div class="info">
               <h3>Phone</h3>
-              <p>+91 12345 67890</p>
+              <p>+91 9042737339</p>
             </div>
           </div>
         </a>
