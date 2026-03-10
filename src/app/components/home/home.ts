@@ -11,26 +11,28 @@ import * as THREE from 'three';
 
       <!-- ===== HERO SECTION ===== -->
       <section class="hero-section" id="hero">
-        <div class="hero-split">
+        <div class="hero-container">
           <div class="hero-content">
             <h1 class="hero-title animate-in">
-              Clean <span class="accent"></span> Your <span class="accent">Sweet Home &</span> <span class="accent">   Industry</span>
+              Clean Your <br> <span class="accent">Sweet Home & Industry</span>
             </h1>
             <p class="hero-quote animate-in-delay">
               "Sustainability is no longer about doing less harm. It's about doing more good."
             </p>
             <div class="quote-slider animate-in-more-delay">
               <div class="quote-card glass-card">
-                <p>"Clean space, clear mind. We pick up your scrap, you pick up the peace."</p>
+                <p class="bold-quote">"Clean space, clear mind. We pick up your scrap, you pick up the peace."</p>
               </div>
             </div>
+            
+            <div class="hero-main-image-wrapper animate-in-delay">
+              <img src="assets/hero.png" alt="ScrapHome - Professional scrap collection" class="hero-main-image" />
+            </div>
+
             <a href="#services" class="scroll-indicator animate-in-more-delay">
               <span class="scroll-arrow">↓</span>
-              <span>Explore</span>
+              <span>Explore Our Services</span>
             </a>
-          </div>
-          <div class="hero-image-wrapper animate-in-delay">
-            <img src="assets/hero.png" alt="ScrapHome - Professional scrap collection" class="hero-image" />
           </div>
         </div>
 
@@ -279,82 +281,89 @@ import * as THREE from 'three';
       align-items: center;
       justify-content: center;
       z-index: 1;
-      padding: 0 5%;
+      padding: 120px 5% 60px;
     }
 
-    .hero-split {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      max-width: 1300px;
+    .hero-container {
+      max-width: 1200px;
       width: 100%;
       z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .hero-content {
-      text-align: left;
+      text-align: center;
+      max-width: 1000px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-main-image-wrapper {
+      margin: 3rem 0;
       max-width: 600px;
-      padding: 2rem;
-      flex: 1;
-    }
-
-    .hero-image-wrapper {
-      flex: 0 0 auto;
-      max-width: 420px;
       width: 100%;
+      position: relative;
     }
 
-    .hero-image {
+    .hero-main-image {
       width: 100%;
       height: auto;
-      border-radius: 24px;
-      box-shadow: 0 20px 60px rgba(39, 174, 96, 0.12);
+      border-radius: 30px;
+      box-shadow: 0 30px 60px -12px rgba(39, 174, 96, 0.2);
       transition: transform 0.5s ease;
+      border: 1px solid rgba(46, 204, 113, 0.1);
     }
 
-    .hero-image:hover {
-      transform: scale(1.03) translateY(-5px);
+    .hero-main-image:hover {
+      transform: scale(1.02) translateY(-10px);
     }
 
     .hero-title {
-      font-size: 4.5rem;
+      font-size: clamp(3rem, 8vw, 5.5rem);
       margin-bottom: 1.5rem;
       color: var(--text-main);
       line-height: 1.1;
-      background: linear-gradient(135deg, var(--text-main), var(--primary));
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--text-main) 30%, var(--primary) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .hero-quote {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: var(--text-dim);
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       font-style: italic;
+      max-width: 700px;
     }
 
     .quote-card {
-      padding: 30px 40px;
-      max-width: 550px;
-      margin: 0 auto;
-      border-radius: 20px;
-      font-size: 1.1rem;
-      font-weight: 300;
+      padding: 25px 40px;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      border-radius: 24px;
+      background: rgba(39, 174, 96, 0.1);
+      border: 2px solid var(--primary);
       position: relative;
       overflow: hidden;
     }
 
+    .bold-quote {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0;
+      line-height: 1.4;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
     .quote-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(180deg, var(--primary), var(--secondary));
-      border-radius: 4px;
+      display: none;
     }
 
     .scroll-indicator {
