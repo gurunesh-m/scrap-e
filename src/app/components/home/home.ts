@@ -110,57 +110,20 @@ import * as THREE from 'three';
             </p>
             <div class="stats-row">
               <div class="stat-item">
-                <span class="stat-number">500+</span>
-                <span class="stat-label">Homes Served</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">10T</span>
-                <span class="stat-label">Scrap Collected</span>
+                <span class="stat-number">10T+</span>
+                <span class="stat-label">Collected</span>
               </div>
               <div class="stat-item">
                 <span class="stat-number">98%</span>
-                <span class="stat-label">Satisfied</span>
+                <span class="stat-label">Happy</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ===== CONTACT SECTION ===== -->
-      <section class="contact-section" id="contact">
-        <div class="section-header">
-          <span class="section-tag">Reach Out</span>
-          <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
-          <div class="title-underline"></div>
-          <p class="section-subtitle">Get in touch with us today for a free estimate.</p>
-        </div>
-        <div class="contact-grid">
-          <a href="https://wa.me/919965937339" target="_blank" class="contact-card glass-card" id="contact-whatsapp">
-            <span class="contact-icon">💬</span>
-            <div class="contact-info">
-              <h3>WhatsApp</h3>
-              <p>+91 9965937339</p>
-            </div>
-            <span class="card-arrow">→</span>
-          </a>
-          <a href="mailto:novamobilespdm@gmail.com" class="contact-card glass-card" id="contact-email">
-            <span class="contact-icon">📧</span>
-            <div class="contact-info">
-              <h3>Email</h3>
-              <p>novamobilespdm@gmail.com</p>
-            </div>
-            <span class="card-arrow">→</span>
-          </a>
-          <a href="tel:+919042737339" class="contact-card glass-card" id="contact-phone">
-            <span class="contact-icon">📞</span>
-            <div class="contact-info">
-              <h3>Phone</h3>
-              <p>+91 9042737339</p>
-            </div>
-            <span class="card-arrow">→</span>
-          </a>
-        </div>
-      </section>
+      <!-- ===== NO CONTACT SECTION (Removed as per request) ===== -->
+
 
       <!-- ===== FOOTER WITH MAP ===== -->
       <footer class="footer" id="footer">
@@ -177,7 +140,6 @@ import * as THREE from 'three';
               <a href="#hero">Home</a>
               <a href="#services">Services</a>
               <a href="#about">About</a>
-              <a href="#contact">Contact</a>
             </div>
             <div class="footer-col">
               <h4>Services</h4>
@@ -189,21 +151,8 @@ import * as THREE from 'three';
           </div>
         </div>
 
-        <div class="footer-map">
-          <h4 class="map-title">📍 Find Us  </h4>
-          <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3916.7373074041907!2d77.28841200000001!3d10.98319000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDU4JzU5LjUiTiA3N8KwMTcnMTguMyJF!5e0!3m2!1sen!2sin!4v1773072596705!5m2!1sen!2sin"
-              width="100%"
-              height="350"
-              style="border:0; border-radius: 20px;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="ScrapHome Location - Coimbatore">
-            </iframe>
-          </div>
-        </div>
+        <!-- ===== NO MAP (Removed as per request) ===== -->
+
 
         <div class="footer-bottom">
           <p>&copy; 2026 ScrapHome. All rights reserved. Built with 💚 for the planet.</p>
@@ -235,7 +184,7 @@ import * as THREE from 'three';
 
     .section-header {
       text-align: center;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
 
     .section-tag {
@@ -276,12 +225,12 @@ import * as THREE from 'three';
     .hero-section {
       position: relative;
       width: 100%;
-      min-height: 100vh;
+      min-height: 80vh;
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 1;
-      padding: 120px 5% 60px;
+      padding: 80px 5% 30px;
     }
 
     .hero-container {
@@ -303,8 +252,8 @@ import * as THREE from 'three';
     }
 
     .hero-main-image-wrapper {
-      margin: 3rem 0;
-      max-width: 600px;
+      margin: 1rem 0;
+      max-width: 500px;
       width: 100%;
       position: relative;
     }
@@ -337,7 +286,7 @@ import * as THREE from 'three';
     .hero-quote {
       font-size: 1.2rem;
       color: var(--text-dim);
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       font-style: italic;
       max-width: 700px;
     }
@@ -371,7 +320,7 @@ import * as THREE from 'three';
       flex-direction: column;
       align-items: center;
       gap: 6px;
-      margin-top: 3rem;
+      margin-top: 1rem;
       color: var(--primary);
       text-decoration: none;
       font-weight: 600;
@@ -421,15 +370,15 @@ import * as THREE from 'three';
     .services-section {
       position: relative;
       z-index: 1;
-      padding: 8rem 5% 6rem;
+      padding: 4rem 5% 3rem;
       background: linear-gradient(180deg, rgba(248, 250, 252, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
       backdrop-filter: blur(8px);
     }
 
     .service-banner {
-      max-width: 900px;
-      margin: 0 auto 3.5rem;
-      border-radius: 24px;
+      max-width: 500px;
+      margin: 0 auto 1.2rem;
+      border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
     }
@@ -447,20 +396,19 @@ import * as THREE from 'three';
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .service-card {
-      padding: 45px 35px;
+      padding: 20px 20px;
       text-align: center;
       transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       background: rgba(255, 255, 255, 0.9);
       border: 1px solid rgba(46, 204, 113, 0.1);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-      border-radius: 24px;
+      border-radius: 20px;
       position: relative;
       overflow: hidden;
     }
@@ -494,7 +442,7 @@ import * as THREE from 'three';
     }
 
     .service-icon {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       position: relative;
       z-index: 2;
     }
@@ -527,7 +475,7 @@ import * as THREE from 'three';
     .about-section {
       position: relative;
       z-index: 1;
-      padding: 8rem 5% 6rem;
+      padding: 4rem 5% 3rem;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(232, 245, 233, 0.4) 50%, rgba(248, 250, 252, 0.95) 100%);
     }
 
@@ -535,8 +483,8 @@ import * as THREE from 'three';
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 60px;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 40px;
       align-items: center;
     }
 
@@ -548,16 +496,16 @@ import * as THREE from 'three';
 
     .about-image-container {
       position: relative;
-      width: 320px;
-      height: 320px;
+      width: 250px;
+      height: 250px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .about-image {
-      width: 260px;
-      height: 260px;
+      width: 200px;
+      height: 200px;
       object-fit: contain;
       border-radius: 50%;
       z-index: 2;
@@ -578,9 +526,9 @@ import * as THREE from 'three';
       animation: orbitSpin 20s linear infinite;
     }
 
-    .ring-1 { width: 180px; height: 180px; animation-duration: 15s; }
-    .ring-2 { width: 230px; height: 230px; animation-duration: 22s; animation-direction: reverse; }
-    .ring-3 { width: 280px; height: 280px; animation-duration: 30s; border-style: dotted; }
+    .ring-1 { width: 140px; height: 140px; animation-duration: 15s; }
+    .ring-2 { width: 180px; height: 180px; animation-duration: 22s; animation-direction: reverse; }
+    .ring-3 { width: 220px; height: 220px; animation-duration: 30s; border-style: dotted; }
 
     @keyframes orbitSpin {
       from { transform: rotate(0deg); }
@@ -600,9 +548,9 @@ import * as THREE from 'three';
 
     .stats-row {
       display: flex;
-      gap: 30px;
-      margin-top: 2rem;
-      padding-top: 2rem;
+      gap: 20px;
+      margin-top: 1rem;
+      padding-top: 1rem;
       border-top: 1px solid rgba(39, 174, 96, 0.15);
     }
 
@@ -612,7 +560,7 @@ import * as THREE from 'three';
     }
 
     .stat-number {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 800;
       color: var(--primary);
       letter-spacing: -1px;
@@ -709,8 +657,8 @@ import * as THREE from 'three';
     .footer-top {
       display: flex;
       justify-content: space-between;
-      gap: 60px;
-      padding: 5rem 5% 3rem;
+      gap: 40px;
+      padding: 2rem 5% 1rem;
       max-width: 1200px;
       margin: 0 auto;
       flex-wrap: wrap;

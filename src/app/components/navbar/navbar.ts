@@ -14,8 +14,8 @@ import { Component } from '@angular/core';
         <a href="#hero" class="nav-link" (click)="scrollTo($event, 'hero')">Home</a>
         <a href="#services" class="nav-link" (click)="scrollTo($event, 'services')">Industry</a>
         <a href="#about" class="nav-link" (click)="scrollTo($event, 'about')">About</a>
-        <a href="#contact" class="nav-link" (click)="scrollTo($event, 'contact')">Contact</a>
       </div>
+
 
       <div class="nav-actions">
         <a href="tel:+919042737339" class="call-now-btn">
