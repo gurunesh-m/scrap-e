@@ -12,27 +12,29 @@ import * as THREE from 'three';
       <!-- ===== HERO SECTION ===== -->
       <section class="hero-section" id="hero">
         <div class="hero-container">
-          <div class="hero-content">
-            <h1 class="hero-title animate-in">
-              Clean Your <br> <span class="accent">Sweet Home & Industry</span>
-            </h1>
-            <p class="hero-quote animate-in-delay">
-              "Sustainability is no longer about doing less harm. It's about doing more good."
-            </p>
-            <div class="quote-slider animate-in-more-delay">
-              <div class="quote-card glass-card">
-                <p class="bold-quote">"Clean space, clear mind. We pick up your scrap, you pick up the peace."</p>
+          <div class="hero-row">
+            <div class="hero-text-content">
+              <h1 class="hero-title animate-in">
+                Clean Your <br> <span class="accent">Sweet Home & Industry</span>
+              </h1>
+              <p class="hero-quote animate-in-delay">
+                "Sustainability is no longer about doing less harm. It's about doing more good."
+              </p>
+              <div class="quote-slider animate-in-more-delay">
+                <div class="quote-card glass-card">
+                  <p class="bold-quote">"Clean space, clear mind. We pick up your scrap, you pick up the peace."</p>
+                </div>
               </div>
+              
+              <a href="#services" class="scroll-indicator animate-in-more-delay">
+                <span class="scroll-arrow">↓</span>
+                <span>Explore Our Services</span>
+              </a>
             </div>
-            
+
             <div class="hero-main-image-wrapper animate-in-delay">
               <img src="assets/hero.png" alt="ScrapHome - Professional scrap collection" class="hero-main-image" />
             </div>
-
-            <a href="#services" class="scroll-indicator animate-in-more-delay">
-              <span class="scroll-arrow">↓</span>
-              <span>Explore Our Services</span>
-            </a>
           </div>
         </div>
 
@@ -234,25 +236,29 @@ import * as THREE from 'three';
     }
 
     .hero-container {
-      max-width: 1200px;
+      max-width: 1250px;
       width: 100%;
       z-index: 10;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
-    .hero-content {
-      text-align: center;
-      max-width: 1000px;
-      padding: 0;
+    .hero-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      width: 100%;
+    }
+
+    .hero-text-content {
+      flex: 1.2;
+      text-align: left;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .hero-main-image-wrapper {
-      margin: 1rem 0;
+      flex: 0.8;
       max-width: 500px;
       width: 100%;
       position: relative;
@@ -272,11 +278,12 @@ import * as THREE from 'three';
     }
 
     .hero-title {
-      font-size: clamp(3rem, 8vw, 5.5rem);
-      margin-bottom: 1.5rem;
+      font-size: clamp(2.5rem, 6vw, 4.2rem);
+      margin-bottom: 1.2rem;
       color: var(--text-main);
       line-height: 1.1;
       font-weight: 800;
+      text-align: left;
       background: linear-gradient(135deg, var(--text-main) 30%, var(--primary) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -284,17 +291,18 @@ import * as THREE from 'three';
     }
 
     .hero-quote {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: var(--text-dim);
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
       font-style: italic;
-      max-width: 700px;
+      max-width: 550px;
+      text-align: left;
     }
 
     .quote-card {
-      padding: 25px 40px;
-      max-width: 700px;
-      margin: 0 auto 2rem;
+      padding: 20px 30px;
+      max-width: 550px;
+      margin: 0 0 1.5rem 0;
       border-radius: 24px;
       background: rgba(39, 174, 96, 0.1);
       border: 2px solid var(--primary);
@@ -316,10 +324,6 @@ import * as THREE from 'three';
     }
 
     .scroll-indicator {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
       margin-top: 1rem;
       color: var(--primary);
       text-decoration: none;
@@ -328,6 +332,10 @@ import * as THREE from 'three';
       letter-spacing: 2px;
       text-transform: uppercase;
       transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
     }
 
     .scroll-indicator:hover {
@@ -337,6 +345,7 @@ import * as THREE from 'three';
     .scroll-arrow {
       font-size: 1.5rem;
       animation: bounce 2s ease infinite;
+      margin-left: 10px;
     }
 
     @keyframes bounce {
@@ -765,6 +774,50 @@ import * as THREE from 'three';
     }
 
     /* =============== RESPONSIVE =============== */
+    @media (max-width: 992px) {
+      .hero-row {
+        gap: 20px;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .hero-main-image-wrapper {
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-row {
+        flex-direction: row; /* Keep it side-by-side */
+        align-items: center;
+        gap: 15px;
+      }
+      .hero-text-content {
+        flex: 1.5;
+        text-align: left;
+        align-items: flex-start;
+      }
+      .hero-main-image-wrapper {
+        flex: 1;
+        max-width: 140px;
+      }
+      .hero-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+      }
+      .hero-quote, .quote-card {
+        display: none; /* Hide for extreme mobile to keep layout clean */
+      }
+      .scroll-indicator {
+        font-size: 0.6rem;
+        margin-top: 0.5rem;
+      }
+      .scroll-arrow {
+        font-size: 1rem;
+        margin-left: 5px;
+      }
+    }
+
     @media (max-width: 768px) {
       .hero-split {
         flex-direction: column;
