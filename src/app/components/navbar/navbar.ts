@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
+  imports: [RouterLink],
   template: `
     <nav class="navbar glass-card">
       <div class="logo-area">
@@ -11,9 +13,10 @@ import { Component } from '@angular/core';
       </div>
       
       <div class="nav-links-row">
-        <a href="#hero" class="nav-link" (click)="scrollTo($event, 'hero')">Home</a>
-        <a href="#services" class="nav-link" (click)="scrollTo($event, 'services')">Industry</a>
-        <a href="#about" class="nav-link" (click)="scrollTo($event, 'about')">About</a>
+        <a routerLink="/" fragment="hero" class="nav-link">Home</a>
+        <a routerLink="/" fragment="services" class="nav-link">Industry</a>
+        <a routerLink="/" fragment="about" class="nav-link">About</a>
+        <a routerLink="/contact" class="nav-link">Contact</a>
       </div>
 
 
@@ -30,7 +33,7 @@ import { Component } from '@angular/core';
   `,
   styles: [`
     .navbar {
-      position: fixed;
+      position: absolute;
       top: 15px;
       left: 50%;
       transform: translateX(-50%);
@@ -158,12 +161,4 @@ import { Component } from '@angular/core';
     }
   `]
 })
-export class NavbarComponent {
-  scrollTo(event: Event, id: string): void {
-    event.preventDefault();
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-}
+export class NavbarComponent { }

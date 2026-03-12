@@ -55,34 +55,36 @@ import * as THREE from 'three';
           <div class="title-underline"></div>
         </div>
 
-        <div class="service-banner">
-          <img src="assets/service.png" alt="Doorstep scrap pickup service" class="service-banner-img" />
-        </div>
+        <div class="services-layout">
+          <div class="services-grid">
+            <div class="service-card glass-card" id="service-1">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">📍</div>
+                <div class="icon-glow"></div>
+              </div>
+              <h3>Available for Coimbatore only</h3>
+              <p>Exclusively serving the Coimbatore region with dedicated local support.</p>
+            </div>
+            <div class="service-card glass-card" id="service-2">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">🚚</div>
+                <div class="icon-glow"></div>
+              </div>
+              <h3>Door step pickup</h3>
+              <p>No need to travel. We come directly to your home at your convenience.</p>
+            </div>
+            <div class="service-card glass-card" id="service-3">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">⚡</div>
+                <div class="icon-glow"></div>
+              </div>
+              <h3>Save your time</h3>
+              <p>Quick schedules and efficient collection process to value your time.</p>
+            </div>
+          </div>
 
-        <div class="services-grid">
-          <div class="service-card glass-card" id="service-1">
-            <div class="service-icon-wrapper">
-              <div class="service-icon">📍</div>
-              <div class="icon-glow"></div>
-            </div>
-            <h3>Available for Coimbatore only</h3>
-            <p>Exclusively serving the Coimbatore region with dedicated local support.</p>
-          </div>
-          <div class="service-card glass-card" id="service-2">
-            <div class="service-icon-wrapper">
-              <div class="service-icon">🚚</div>
-              <div class="icon-glow"></div>
-            </div>
-            <h3>Door step pickup</h3>
-            <p>No need to travel. We come directly to your home at your convenience.</p>
-          </div>
-          <div class="service-card glass-card" id="service-3">
-            <div class="service-icon-wrapper">
-              <div class="service-icon">⚡</div>
-              <div class="icon-glow"></div>
-            </div>
-            <h3>Save your time</h3>
-            <p>Quick schedules and efficient collection process to value your time.</p>
+          <div class="service-banner">
+            <img src="assets/service.png" alt="Doorstep scrap pickup service" class="service-banner-img" />
           </div>
         </div>
       </section>
@@ -232,7 +234,7 @@ import * as THREE from 'three';
       align-items: center;
       justify-content: center;
       z-index: 1;
-      padding: 80px 5% 30px;
+      padding: 130px 5% 30px;
     }
 
     .hero-container {
@@ -384,9 +386,18 @@ import * as THREE from 'three';
       backdrop-filter: blur(8px);
     }
 
+    .services-layout {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
     .service-banner {
+      flex: 1;
       max-width: 500px;
-      margin: 0 auto 1.2rem;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
@@ -404,15 +415,18 @@ import * as THREE from 'three';
     }
 
     .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
 
-      padding: 20px 20px;
-      text-align: center;
+    .service-card {
+      padding: 18px 25px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 20px;
       transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       background: rgba(255, 255, 255, 0.9);
       border: 1px solid rgba(46, 204, 113, 0.1);
@@ -447,7 +461,7 @@ import * as THREE from 'three';
     .service-icon-wrapper {
       position: relative;
       display: inline-block;
-      margin-bottom: 20px;
+      flex-shrink: 0;
     }
 
     .service-icon {
@@ -469,8 +483,8 @@ import * as THREE from 'three';
     }
 
     .service-card h3 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
       color: var(--text-main);
     }
 
@@ -841,6 +855,16 @@ import * as THREE from 'three';
       .footer-top { flex-direction: column; gap: 30px; }
       .footer-links-grid { gap: 40px; }
       .service-banner { margin: 0 auto 2.5rem; }
+      .services-layout {
+        flex-direction: column-reverse;
+      }
+      .services-grid {
+        width: 100%;
+      }
+      .service-card {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   `]
 })
