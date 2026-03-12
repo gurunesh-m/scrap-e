@@ -396,16 +396,19 @@ import * as THREE from 'three';
     }
 
     .service-banner {
-      flex: 1;
-      max-width: 500px;
-      border-radius: 20px;
+      flex: 1.2;
+      max-width: 600px;
+      min-height: 600px;
+      border-radius: 40px;
+      margin: 20px 0;
       overflow: hidden;
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
     }
 
     .service-banner-img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
       transition: transform 0.6s ease;
     }
@@ -854,7 +857,12 @@ import * as THREE from 'three';
       .stats-row { justify-content: center; }
       .footer-top { flex-direction: column; gap: 30px; }
       .footer-links-grid { gap: 40px; }
-      .service-banner { margin: 0 auto 2.5rem; }
+      .service-banner { 
+        margin: 0 auto 2.5rem; 
+        min-height: 320px;
+        max-width: 100%;
+        border-radius: 20px;
+      }
       .services-layout {
         flex-direction: column-reverse;
       }

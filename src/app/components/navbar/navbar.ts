@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   template: `
     <nav class="navbar glass-card">
-      <div class="logo-area">
+      <div class="logo-area" routerLink="/" style="cursor: pointer;">
         <img src="assets/logo.png" alt="ScrapHome Logo" class="logo-img" />
         <span class="logo-scrap">SCRAP</span>
       </div>
