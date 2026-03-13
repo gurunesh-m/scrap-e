@@ -33,7 +33,7 @@ import { RouterLink } from '@angular/router';
   `,
   styles: [`
     .navbar {
-      position: absolute;
+      position: fixed;
       top: 15px;
       left: 50%;
       transform: translateX(-50%);

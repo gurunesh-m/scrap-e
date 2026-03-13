@@ -188,7 +188,7 @@ import * as THREE from 'three';
 
     .section-header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 0.8rem;
     }
 
     .section-tag {
@@ -201,14 +201,14 @@ import * as THREE from 'three';
       border-radius: 30px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       border: 1px solid rgba(39, 174, 96, 0.2);
     }
 
     .section-title {
-      font-size: 3rem;
+      font-size: clamp(2rem, 5vw, 3rem);
       color: var(--text-main);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.25rem;
     }
 
     .title-underline {
@@ -216,7 +216,7 @@ import * as THREE from 'three';
       height: 4px;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       border-radius: 4px;
-      margin: 0 auto 1rem;
+      margin: 0 auto 0.5rem;
     }
 
     .section-subtitle {
@@ -229,12 +229,13 @@ import * as THREE from 'three';
     .hero-section {
       position: relative;
       width: 100%;
-      min-height: 80vh;
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       z-index: 1;
-      padding: 130px 5% 30px;
+      padding: 100px 5% 50px;
     }
 
     .hero-container {
@@ -381,7 +382,11 @@ import * as THREE from 'three';
     .services-section {
       position: relative;
       z-index: 1;
-      padding: 4rem 5% 3rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px 5% 60px;
       background: linear-gradient(180deg, rgba(248, 250, 252, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
       backdrop-filter: blur(8px);
     }
@@ -390,7 +395,7 @@ import * as THREE from 'three';
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 50px;
+      gap: 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -398,9 +403,9 @@ import * as THREE from 'three';
     .service-banner {
       flex: 1.2;
       max-width: 600px;
-      min-height: 600px;
+      height: 500px;
       border-radius: 40px;
-      margin: 20px 0;
+      margin: 0;
       overflow: hidden;
       box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
     }
@@ -421,11 +426,11 @@ import * as THREE from 'three';
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 10px;
     }
 
     .service-card {
-      padding: 18px 25px;
+      padding: clamp(12px, 2vw, 18px) clamp(15px, 3vw, 25px);
       text-align: left;
       display: flex;
       align-items: center;
@@ -501,7 +506,11 @@ import * as THREE from 'three';
     .about-section {
       position: relative;
       z-index: 1;
-      padding: 4rem 5% 3rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px 5% 60px;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(232, 245, 233, 0.4) 50%, rgba(248, 250, 252, 0.95) 100%);
     }
 
@@ -846,8 +855,8 @@ import * as THREE from 'three';
       .hero-image-wrapper {
         max-width: 300px;
       }
-      .hero-title { font-size: 2.8rem; }
-      .section-title { font-size: 2.2rem; }
+      .hero-title { font-size: clamp(2rem, 8vw, 2.8rem); }
+      .section-title { font-size: clamp(1.8rem, 6vw, 2.2rem); }
       .about-wrapper {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -858,8 +867,8 @@ import * as THREE from 'three';
       .footer-top { flex-direction: column; gap: 30px; }
       .footer-links-grid { gap: 40px; }
       .service-banner { 
-        margin: 0 auto 2.5rem; 
-        min-height: 320px;
+        margin: 1rem auto; 
+        height: 350px;
         max-width: 100%;
         border-radius: 20px;
       }
