@@ -21,7 +21,7 @@ import { Component } from '@angular/core';
     .page-container {
       padding-top: 15vh;
       min-height: 100vh;
-      width: 100vw;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -63,6 +63,26 @@ import { Component } from '@angular/core';
     @keyframes rotate {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      .page-container {
+        padding-top: 120px;
+      }
+      .about-hero {
+        padding: 30px 20px;
+        width: 95%;
+        border-radius: 24px;
+      }
+      .page-title {
+        font-size: 2rem;
+      }
+      .about-text {
+        font-size: 1rem;
+      }
+      .recycle-logo {
+        font-size: 3.5rem;
+      }
     }
 
     .animate-in { animation: fadeInUp 1s ease forwards; }

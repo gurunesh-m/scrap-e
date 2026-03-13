@@ -558,6 +558,22 @@ import * as THREE from 'three';
       align-items: center;
     }
 
+    @media (max-width: 768px) {
+      .about-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+      }
+      .about-visual {
+        order: -1;
+      }
+      .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
     .about-visual {
       display: flex;
       justify-content: center;
@@ -642,6 +658,14 @@ import * as THREE from 'three';
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      .stats-row {
+        justify-content: center;
+        gap: 40px;
+        width: 100%;
+      }
     }
 
     /* =============== CONTACT SECTION =============== */
@@ -770,6 +794,15 @@ import * as THREE from 'three';
       gap: 60px;
     }
 
+    @media (max-width: 600px) {
+      .footer-links-grid {
+        gap: 30px;
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+    }
+
     .footer-col h4 {
       font-size: 1.1rem;
       font-weight: 700;
@@ -837,45 +870,44 @@ import * as THREE from 'three';
     /* =============== RESPONSIVE =============== */
     @media (max-width: 992px) {
       .hero-row {
-        gap: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+      }
+      .hero-text-content {
+        align-items: center;
+        text-align: center;
       }
       .hero-title {
-        font-size: 2.2rem;
+        font-size: clamp(2rem, 8vw, 3.5rem);
       }
-      .hero-main-image-wrapper {
-        max-width: 300px;
+      .hero-quote, .quote-card {
+        margin: 0 auto 1.5rem;
+      }
+      .scroll-indicator {
+        align-items: center;
       }
     }
 
     @media (max-width: 600px) {
-      .hero-row {
-        flex-direction: row; /* Keep it side-by-side */
-        align-items: center;
-        gap: 15px;
-      }
-      .hero-text-content {
-        flex: 1.5;
-        text-align: left;
-        align-items: flex-start;
-      }
-      .hero-main-image-wrapper {
-        flex: 1;
-        max-width: 140px;
+      .hero-section {
+        padding-top: 120px;
       }
       .hero-title {
-        font-size: 1.4rem;
-        margin-bottom: 0.5rem;
+        font-size: 2rem;
+      }
+      .hero-main-image-wrapper {
+        max-width: 280px;
       }
       .hero-quote, .quote-card {
-        display: none; /* Hide for extreme mobile to keep layout clean */
+        display: block;
+        font-size: 0.9rem;
       }
-      .scroll-indicator {
-        font-size: 0.6rem;
-        margin-top: 0.5rem;
+      .bold-quote {
+        font-size: 1.1rem;
       }
-      .scroll-arrow {
-        font-size: 1rem;
-        margin-left: 5px;
+      .floater {
+        display: none;
       }
     }
 

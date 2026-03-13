@@ -141,6 +141,32 @@ import { Component } from '@angular/core';
       display: block;
     }
 
+    @media (max-width: 768px) {
+      .page-container {
+        padding: 40px 20px;
+        margin-top: 100px;
+        width: 95%;
+        border-radius: 24px;
+      }
+      .page-title {
+        font-size: 2.5rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+      .contact-details {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .detail-item {
+        padding: 12px 15px;
+      }
+      .icon {
+        font-size: 1.5rem;
+      }
+    }
+
     .animate-in { animation: fadeInUp 1s ease forwards; }
     .animate-in-delay { animation: fadeInUp 1s ease 0.3s forwards; opacity: 0; }
     .animate-in-more-delay { animation: fadeInUp 1s ease 0.6s forwards; opacity: 0; }
