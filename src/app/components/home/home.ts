@@ -49,42 +49,54 @@ import * as THREE from 'three';
 
       <!-- ===== SERVICES SECTION ===== -->
       <section class="services-section" id="services">
-        <div class="section-header">
-          <span class="section-tag">What We Offer</span>
-          <h2 class="section-title">Our <span class="accent">Eco-Services</span></h2>
-          <div class="title-underline"></div>
-        </div>
+        <div class="services-container">
+          <div class="services-split-layout">
+            <div class="left-content">
+              <div class="section-header">
+                <span class="section-tag">What We Offer</span>
+                <h2 class="section-title">Our <span class="accent">Eco-Services</span></h2>
+                <div class="title-underline"></div>
+              </div>
 
-        <div class="services-layout">
-          <div class="services-grid">
-            <div class="service-card glass-card" id="service-1">
-              <div class="service-icon-wrapper">
-                <div class="service-icon">📍</div>
-                <div class="icon-glow"></div>
+              <div class="services-grid">
+                <div class="service-card glass-card" id="service-1">
+                  <div class="service-icon-wrapper">
+                    <div class="service-icon">📍</div>
+                    <div class="icon-glow"></div>
+                  </div>
+                  <div class="service-content-wrapper">
+                    <h3>Available for Coimbatore only</h3>
+                    <p>Exclusively serving the Coimbatore region with dedicated local support.</p>
+                  </div>
+                </div>
+                <div class="service-card glass-card" id="service-2">
+                  <div class="service-icon-wrapper">
+                    <div class="service-icon">🚚</div>
+                    <div class="icon-glow"></div>
+                  </div>
+                  <div class="service-content-wrapper">
+                    <h3>Door step pickup</h3>
+                    <p>No need to travel. We come directly to your home at your convenience.</p>
+                  </div>
+                </div>
+                <div class="service-card glass-card" id="service-3">
+                  <div class="service-icon-wrapper">
+                    <div class="service-icon">⚡</div>
+                    <div class="icon-glow"></div>
+                  </div>
+                  <div class="service-content-wrapper">
+                    <h3>Save your time</h3>
+                    <p>Quick schedules and efficient collection process to value your time.</p>
+                  </div>
+                </div>
               </div>
-              <h3>Available for Coimbatore only</h3>
-              <p>Exclusively serving the Coimbatore region with dedicated local support.</p>
             </div>
-            <div class="service-card glass-card" id="service-2">
-              <div class="service-icon-wrapper">
-                <div class="service-icon">🚚</div>
-                <div class="icon-glow"></div>
-              </div>
-              <h3>Door step pickup</h3>
-              <p>No need to travel. We come directly to your home at your convenience.</p>
-            </div>
-            <div class="service-card glass-card" id="service-3">
-              <div class="service-icon-wrapper">
-                <div class="service-icon">⚡</div>
-                <div class="icon-glow"></div>
-              </div>
-              <h3>Save your time</h3>
-              <p>Quick schedules and efficient collection process to value your time.</p>
-            </div>
-          </div>
 
-          <div class="service-banner">
-            <img src="assets/service.png" alt="Doorstep scrap pickup service" class="service-banner-img" />
+            <div class="service-banner-container">
+              <div class="service-banner">
+                <img src="assets/service.png" alt="Doorstep scrap pickup service" class="service-banner-img" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -189,9 +201,6 @@ import * as THREE from 'three';
     .section-header {
       text-align: left;
       margin-bottom: 2rem;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
       width: 100%;
     }
 
@@ -390,27 +399,40 @@ import * as THREE from 'three';
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 120px 5% 80px;
+      padding: 100px 5% 60px;
       background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
       backdrop-filter: blur(10px);
     }
 
-    .services-layout {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      gap: 40px;
+    .services-container {
       max-width: 1200px;
       margin: 0 auto;
       width: 100%;
     }
 
-    .service-banner {
+    .services-split-layout {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .left-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-banner-container {
       flex: 1.2;
-      max-width: 600px;
-      height: 500px;
+      display: flex;
+    }
+
+    .service-banner {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
       border-radius: 40px;
-      margin: 0;
       overflow: hidden;
       box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
     }
@@ -424,26 +446,26 @@ import * as THREE from 'three';
     }
 
     .service-banner:hover .service-banner-img {
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
 
     .services-grid {
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 15px;
     }
 
     .service-card {
-      padding: 24px 30px;
+      padding: 20px 25px;
       text-align: left;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 20px;
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       background: rgba(255, 255, 255, 0.7);
       border: 1px solid rgba(46, 204, 113, 0.15);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
       border-radius: 24px;
       position: relative;
       overflow: hidden;
@@ -497,8 +519,8 @@ import * as THREE from 'three';
     }
 
     .service-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
       color: var(--text-main);
       font-weight: 700;
     }
@@ -868,34 +890,20 @@ import * as THREE from 'three';
       .hero-image-wrapper {
         max-width: 300px;
       }
-      .hero-title { font-size: clamp(2rem, 8vw, 2.8rem); }
-      .section-header { text-align: center; }
-      .section-title { font-size: clamp(1.8rem, 6vw, 2.2rem); }
-      .title-underline { margin: 0.5rem auto 0; }
-      .about-wrapper {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
+      .services-split-layout {
+        flex-direction: column;
+        gap: 20px;
       }
-      .about-content .title-underline { margin: 0 auto 1.5rem; }
-      .stats-row { justify-content: center; }
-      .footer-top { flex-direction: column; gap: 30px; }
-      .footer-links-grid { gap: 40px; }
+      .service-banner-container { transform: none; }
+      .section-header { text-align: center; }
+      .title-underline { margin: 0.5rem auto 0; }
       .service-banner { 
-        margin: 1rem auto; 
-        height: 350px;
-        max-width: 100%;
+        height: 250px;
+        min-height: 250px;
         border-radius: 20px;
       }
-      .services-layout {
-        flex-direction: column-reverse;
-      }
-      .services-grid {
-        width: 100%;
-      }
       .service-card {
-        flex-direction: column;
-        text-align: center;
+        padding: 15px 20px;
       }
     }
   `]
