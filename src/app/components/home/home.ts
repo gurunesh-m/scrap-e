@@ -926,13 +926,18 @@ import * as THREE from 'three';
         flex-direction: column;
         gap: 20px;
       }
-      .service-banner-container { transform: none; }
+      .service-banner-container { 
+        transform: none; 
+        width: 100vw;
+        margin-left: calc(-5% - 2px); /* Compensation for section padding */
+      }
       .section-header { text-align: center; }
       .title-underline { margin: 0.5rem auto 0; }
       .service-banner { 
-        height: 250px;
-        min-height: 250px;
-        border-radius: 20px;
+        height: 300px;
+        min-height: 300px;
+        border-radius: 0;
+        width: 100%;
       }
       .service-card {
         padding: 15px 20px;
